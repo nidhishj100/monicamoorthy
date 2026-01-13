@@ -14,7 +14,7 @@
         .blob { position: fixed; width: 600px; height: 600px; background: rgba(99, 102, 241, 0.12); filter: blur(120px); border-radius: 50%; z-index: -1; pointer-events: none; }
         .reveal { opacity: 0; transform: translateY(50px); transition: all 1s cubic-bezier(0.17, 0.55, 0.55, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
-        section { padding-top: 80px; padding-bottom: 80px; }
+        section { padding-top: 100px; padding-bottom: 100px; }
         .timeline-dot::before { content: ''; position: absolute; left: -33px; top: 5px; width: 14px; height: 14px; background: #6366f1; border-radius: 50%; box-shadow: 0 0 15px #6366f1; }
     </style>
 </head>
@@ -24,7 +24,7 @@
 
     <nav class="fixed w-full z-50 px-6 py-4">
         <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
-            <span class="text-xl font-extrabold tracking-tighter gradient-text">MONICA MOORTHY</span>
+            <span class="text-xl font-extrabold tracking-tighter gradient-text underline decoration-indigo-500/30">MONICA MOORTHY</span>
             <div class="hidden md:flex gap-8 text-sm font-medium items-center text-gray-400 uppercase tracking-widest">
                 <a href="#about" class="hover:text-white transition">About</a>
                 <a href="#experience" class="hover:text-white transition">Experience</a>
@@ -36,12 +36,12 @@
 
     <section id="home" class="min-h-screen flex items-center pt-32 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
         <div class="reveal">
-            <span class="px-4 py-1 rounded-full border border-indigo-500/30 text-indigo-400 text-xs font-bold uppercase tracking-widest mb-6 inline-block">Career Coach & NLP Trainer</span>
-            <h1 class="text-6xl md:text-7xl font-extrabold mb-6 tracking-tight leading-none">Empowering Futures Through <span class="gradient-text italic">Guidance.</span></h1>
-            <p class="text-gray-400 text-lg mb-8 leading-relaxed">Personalized, purposeful career paths for students and professionals. Transforming aspirations into actionable success.</p>
+            <span class="px-4 py-1 rounded-full border border-indigo-500/30 text-indigo-400 text-xs font-bold uppercase tracking-widest mb-6 inline-block italic">Empowering Futures Through Guidance</span>
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 tracking-tight">Career <span class="gradient-text italic">Architect.</span></h1>
+            <p class="text-gray-400 text-lg mb-8 leading-relaxed max-w-lg">Seasoned Career Coach & Trainer based in Coimbatore. Blending 11+ years of technical prowess from Accenture with transformative psychological insights.</p>
             <div class="flex gap-4">
                 <a href="#contact" class="px-8 py-4 bg-white text-black font-black rounded-xl hover:bg-indigo-400 transition">REQUEST CALL</a>
-                <a href="#about" class="px-8 py-4 glass rounded-xl font-bold hover:bg-white/10 transition">MEET MONICA</a>
+                <a href="#about" class="px-8 py-4 glass rounded-xl font-bold hover:bg-white/10 transition">EXPLORE</a>
             </div>
         </div>
         <div class="reveal relative">
@@ -51,32 +51,34 @@
         </div>
     </section>
 
-    <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="glass p-8 rounded-3xl text-center reveal"><h3 class="text-4xl font-black text-white">11+</h3><p class="text-gray-500 text-xs uppercase mt-2">Years Exp</p></div>
-        <div class="glass p-8 rounded-3xl text-center reveal"><h3 class="text-4xl font-black text-white">20+</h3><p class="text-gray-500 text-xs uppercase mt-2">Services</p></div>
-        <div class="glass p-8 rounded-3xl text-center reveal"><h3 class="text-4xl font-black text-white">99%</h3><p class="text-gray-500 text-xs uppercase mt-2">Satisfaction</p></div>
-        <div class="glass p-8 rounded-3xl text-center reveal"><h3 class="text-4xl font-black text-white">MCA</h3><p class="text-gray-500 text-xs uppercase mt-2">Post Grad</p></div>
-    </div>
-
-    <section id="about" class="px-6 max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-16 items-start">
-            <div class="reveal space-y-6">
-                <h2 class="text-4xl font-bold italic underline decoration-indigo-500">About Monica Moorthy</h2>
-                <p class="text-gray-400 leading-relaxed">
-                    Monica Moorthy is a seasoned **Career Coach and Trainer** based in Coimbatore, Tamil Nadu. With a robust background in technology and human development, she specializes in guiding individuals toward their ideal career paths.
-                </p>
-                <p class="text-gray-400 leading-relaxed">
-                    She employs personalized approaches to help clients identify their strengths, interests, and aspirations. Her commitment to holistic growth blends career guidance with personal development, building confidence and decision-making skills for long-term success.
-                </p>
+    <section id="about" class="px-6 max-w-6xl mx-auto bg-white/[0.01] rounded-[4rem]">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <h2 class="text-4xl font-bold mb-8 italic underline decoration-indigo-500">About Monica Moorthy</h2>
+                <div class="text-gray-400 space-y-4 leading-relaxed">
+                    <p>Based in Coimbatore, Tamil Nadu, Monica Moorthy is a seasoned Career Coach and Trainer with a unique dual-expertise background. With 7 years in software testing at Accenture and 4 years in career counseling, she bridges the gap between technical industry standards and human potential.</p>
+                    <p>Monica specializes in personalized career paths, identifying strengths through certifications in NLP, Hypnopeadia, and Expressive Arts. She has led numerous soft skills workshops across India, empowering countless mentees to achieve success.</p>
+                </div>
             </div>
             <div class="reveal glass p-10 rounded-[3rem] border-indigo-500/20">
-                <h3 class="text-2xl font-bold mb-6 text-indigo-300">Foundation for Success</h3>
-                <p class="text-sm text-gray-400 mb-6 italic">Master of Computer Applications (MCA)</p>
-                <div class="grid grid-cols-1 gap-4">
-                    <div class="flex items-center gap-3 glass p-4 rounded-xl text-xs"><i data-lucide="award" class="text-indigo-400"></i> Certified Career Counselor</div>
-                    <div class="flex items-center gap-3 glass p-4 rounded-xl text-xs"><i data-lucide="brain" class="text-purple-400"></i> NLP Practitioner</div>
-                    <div class="flex items-center gap-3 glass p-4 rounded-xl text-xs"><i data-lucide="palette" class="text-emerald-400"></i> Expressive Arts Practitioner</div>
-                    <div class="flex items-center gap-3 glass p-4 rounded-xl text-xs"><i data-lucide="zap" class="text-yellow-400"></i> Hypnopeadia Certification</div>
+                <h3 class="text-2xl font-bold mb-6 text-indigo-300">Quick Stats</h3>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="border-l-2 border-indigo-500 pl-4">
+                        <h4 class="text-3xl font-black italic">11+</h4>
+                        <p class="text-[10px] text-gray-500 uppercase">Years Exp</p>
+                    </div>
+                    <div class="border-l-2 border-indigo-500 pl-4">
+                        <h4 class="text-3xl font-black italic">99%</h4>
+                        <p class="text-[10px] text-gray-500 uppercase">Student Sat</p>
+                    </div>
+                    <div class="border-l-2 border-indigo-500 pl-4">
+                        <h4 class="text-3xl font-black italic">20+</h4>
+                        <p class="text-[10px] text-gray-500 uppercase">Services</p>
+                    </div>
+                    <div class="border-l-2 border-indigo-500 pl-4">
+                        <h4 class="text-3xl font-black italic">MCA</h4>
+                        <p class="text-[10px] text-gray-500 uppercase">Education</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -88,80 +90,96 @@
             <div class="relative reveal timeline-dot">
                 <h4 class="text-xl font-bold">Accenture (7 Years)</h4>
                 <p class="text-indigo-400 text-sm italic mb-4">Software Testing & Training Specialist</p>
-                <p class="text-gray-400 text-sm leading-relaxed">Developed a strong foundation in the tech and training sectors, leading numerous workshops across India and empowering students with essential communication skills.</p>
+                <p class="text-gray-400 text-sm leading-relaxed">Mastered the tech industry landscape, leading nationwide workshops and empowering students with essential corporate communication skills.</p>
             </div>
             <div class="relative reveal timeline-dot">
                 <h4 class="text-xl font-bold">Career Architect (4+ Years)</h4>
-                <p class="text-indigo-400 text-sm italic mb-4">Counseling & Personal Development</p>
-                <p class="text-gray-400 text-sm leading-relaxed">Dedicated to enhancing career prospects and personal growth of mentees through personalized, purposeful coaching and actionable goal-setting.</p>
+                <p class="text-indigo-400 text-sm italic mb-4">Counseling & Guidance Expert</p>
+                <p class="text-gray-400 text-sm leading-relaxed">Dedicated to holistic mentee development, helping professionals and students identify their strengths and purposeful career pathways.</p>
             </div>
         </div>
     </section>
 
     <section class="py-20 px-6 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-10 text-center italic">Classroom in Action</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <img src="class1.jpg" class="rounded-2xl h-56 w-full object-cover glass hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1524178232363-1fb28f74b671?q=80&w=500'">
-            <img src="class2.jpg" class="rounded-2xl h-56 w-full object-cover glass hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=500'">
-            <img src="class3.jpg" class="rounded-2xl h-56 w-full object-cover glass hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=500'">
-            <img src="class4.jpg" class="rounded-2xl h-56 w-full object-cover glass hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1523240715639-9a671054324f?q=80&w=500'">
+        <h2 class="text-3xl font-bold mb-10 text-center italic">Training in Action</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <img src="class1.jpg" class="rounded-[2rem] h-64 w-full object-cover glass hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1524178232363-1fb28f74b671?q=80&w=500'">
+            <img src="class2.jpg" class="rounded-[2rem] h-64 w-full object-cover glass hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=500'">
+            <img src="class3.jpg" class="rounded-[2rem] h-64 w-full object-cover glass hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=500'">
+            <img src="class4.jpg" class="rounded-[2rem] h-64 w-full object-cover glass hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1523240715639-9a671054324f?q=80&w=500'">
         </div>
     </section>
 
     <section class="py-24 px-6 max-w-6xl mx-auto">
-        <div class="glass p-10 md:p-20 rounded-[4rem] reveal border-indigo-500/20 relative overflow-hidden">
-            <div class="absolute top-10 right-10 text-indigo-500/10 text-9xl font-serif italic">"</div>
-            <div class="grid md:grid-cols-3 gap-12 items-center relative z-10">
+        <div class="glass p-8 md:p-20 rounded-[4rem] reveal border-indigo-500/20 relative overflow-hidden bg-indigo-900/5">
+            <div class="absolute top-10 right-10 text-indigo-500/10 text-[200px] font-serif italic">"</div>
+            <div class="grid md:grid-cols-3 gap-16 items-center relative z-10">
                 <div class="text-center">
-                    <img src="student_nidhish.jpg" class="w-48 h-48 mx-auto rounded-full border-4 border-indigo-500/30 p-2 mb-6" onerror="this.src='https://i.pravatar.cc/300?u=nidhish'">
-                    <h4 class="text-xl font-bold">Nidhish J.</h4>
-                    <p class="text-indigo-400 text-xs italic">B.E. Computer Science Engineering</p>
-                    <p class="text-gray-600 text-[10px] uppercase mt-2">Dhanalakshmi Srinivasan College</p>
+                    <div class="w-56 h-56 mx-auto rounded-full border-4 border-indigo-500/30 p-2 mb-6">
+                        <img src="student_nidhish.jpg" alt="Nidhish J." class="w-full h-full object-cover rounded-full shadow-2xl" onerror="this.src='https://i.pravatar.cc/300?u=nidhish'">
+                    </div>
+                    <h4 class="text-2xl font-bold text-white tracking-tighter italic">Nidhish J.</h4>
+                    <p class="text-indigo-400 text-sm mb-1 italic uppercase tracking-widest text-[10px]">B.E. Computer Science</p>
                 </div>
-                <div class="md:col-span-2 italic text-gray-400 leading-relaxed text-lg">
-                    <p class="mb-4 text-indigo-300 font-semibold">"An Exceptional Teaching Experience"</p>
-                    <p>“Dear Ma'am, I am writing to express my gratitude for your exceptional teaching during our placement training. Additionally, I would like to thank you for the thoughtful gift of chocolates; it made us feel truly appreciated and cared for.”</p>
+                <div class="md:col-span-2 space-y-6">
+                    <h3 class="text-3xl font-semibold text-indigo-300 italic tracking-tight">Heartfelt Student Gratitude</h3>
+                    <div class="text-gray-400 leading-relaxed italic space-y-4 text-lg">
+                        <p>Dear Ma'am,</p>
+                        <p>I am writing to express my sincere gratitude for your exceptional teaching and the invaluable guidance you provided during our placement training sessions. Your classes were always engaging, insightful, and truly helped us prepare better for the challenges ahead.</p>
+                        <p>Additionally, I would like to thank you for the thoughtful gift of chocolates. Among all our teachers, you were the only one who gave us such a sweet and generous gesture. It truly meant a lot to all of us and made us feel appreciated and cared for.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="services" class="py-24 px-6 max-w-6xl mx-auto">
-        <h2 class="text-4xl font-bold mb-16 text-center italic">Personalized Services</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <h2 class="text-4xl font-bold mb-16 text-center italic">Service Pillars</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="glass p-12 rounded-[3rem] reveal hover:bg-white/[0.05] transition group">
-                <i data-lucide="compass" class="mx-auto text-indigo-500 mb-6 group-hover:scale-110 transition w-10 h-10"></i>
-                <h3 class="text-xl font-bold mb-4 italic">Career Counseling</h3>
-                <p class="text-gray-500 text-sm">Identifying unique strengths and aspirations for informed career choices.</p>
+                <i data-lucide="map" class="text-indigo-500 mb-6 group-hover:scale-110 transition"></i>
+                <h3 class="text-2xl font-bold mb-4 italic">Career Counseling</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Personalized assessments to clarify unique strengths and ideal career pathways.</p>
             </div>
             <div class="glass p-12 rounded-[3rem] reveal hover:bg-white/[0.05] transition group">
-                <i data-lucide="mic" class="mx-auto text-purple-500 mb-6 group-hover:scale-110 transition w-10 h-10"></i>
-                <h3 class="text-xl font-bold mb-4 italic">Soft Skills Training</h3>
-                <p class="text-gray-500 text-sm">Empowering workshops on communication, body language, and leadership.</p>
+                <i data-lucide="brain-circuit" class="text-purple-500 mb-6 group-hover:scale-110 transition"></i>
+                <h3 class="text-2xl font-bold mb-4 italic">NLP Training</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Master subconscious communication and behavioral patterns for long-term mindset shifts.</p>
             </div>
             <div class="glass p-12 rounded-[3rem] reveal hover:bg-white/[0.05] transition group">
-                <i data-lucide="trending-up" class="mx-auto text-emerald-500 mb-6 group-hover:scale-110 transition w-10 h-10"></i>
-                <h3 class="text-xl font-bold mb-4 italic">Goal Setting</h3>
-                <p class="text-gray-500 text-sm">Actionable strategies and clear, practical steps to achieve career aspirations.</p>
+                <i data-lucide="users" class="text-yellow-500 mb-6 group-hover:scale-110 transition"></i>
+                <h3 class="text-2xl font-bold mb-4 italic">Soft Skills</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Empowering workshops on leadership, body language, and corporate communication.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto text-center">
-        <div class="glass p-12 md:p-20 rounded-[4rem] reveal border-white/10">
-            <h2 class="text-5xl font-black mb-10 italic italic tracking-tighter italic">Book Appointment</h2>
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="glass p-12 md:p-20 rounded-[4rem] reveal border-white/10 text-center">
+            <h2 class="text-5xl font-black mb-6 italic tracking-tighter">Request A Call Back</h2>
+            <p class="text-gray-400 mb-12">identify your strengths. Book your career counseling session now.</p>
             <form class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                <input type="text" placeholder="Your Name" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-indigo-500">
-                <input type="email" placeholder="Your Email" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-indigo-500">
-                <input type="tel" placeholder="Phone Number" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-indigo-500 col-span-2">
-                <button class="col-span-2 py-6 bg-white text-black font-black rounded-[2rem] hover:bg-indigo-400 transition transform hover:-translate-y-1 shadow-2xl">GET A CALL BACK</button>
+                <div class="space-y-2">
+                    <label class="text-[10px] uppercase tracking-widest text-gray-500 ml-2 italic">Full Name</label>
+                    <input type="text" placeholder="Your Name" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-indigo-500 transition">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] uppercase tracking-widest text-gray-500 ml-2 italic">Email Address</label>
+                    <input type="email" placeholder="Email" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-indigo-500 transition">
+                </div>
+                <div class="col-span-2 space-y-2">
+                    <label class="text-[10px] uppercase tracking-widest text-gray-500 ml-2 italic">Phone Number</label>
+                    <input type="tel" placeholder="+91 98941 90664" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-indigo-500 transition font-bold">
+                </div>
+                <button class="col-span-2 py-6 bg-white text-black font-black rounded-[2rem] hover:bg-indigo-400 transition transform hover:-translate-y-2 shadow-2xl uppercase tracking-widest">SECURE YOUR SLOT</button>
             </form>
-            <div class="mt-12 text-gray-500 text-sm italic">98941 90664 • monicamoorthy@gmail.com</div>
+            <div class="mt-12 text-gray-600 text-xs italic">Call: 98941 90664 • monicamoorthy@gmail.com</div>
         </div>
     </section>
 
-    <footer class="py-16 text-center border-t border-white/5 opacity-50 text-[10px] tracking-widest italic">
-        © 2026 MONICA MOORTHY COACHING • BUILT FOR EXCELLENCE
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="text-3xl font-black gradient-text italic mb-4 tracking-tighter">MONICA MOORTHY</p>
+        <p class="text-[10px] text-gray-700 uppercase tracking-widest italic">Designed for 1st Prize Excellence via GitHub Pages</p>
     </footer>
 
     <script>
@@ -175,6 +193,12 @@
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        
+        window.addEventListener('scroll', () => {
+            const img = document.getElementById('hero-img');
+            const scroll = window.pageYOffset;
+            img.style.transform = `translateY(${scroll * 0.05}px) rotate(${3 + (scroll * -0.01)}deg)`;
+        });
     </script>
 </body>
 </html>
