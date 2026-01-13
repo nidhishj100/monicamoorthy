@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monica Moorthy | NLP Trainer & Psychology Coach</title>
+    <title>Monica Moorthy | Career Coach & NLP Expert</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -11,128 +11,130 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #030712; color: white; overflow-x: hidden; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .gradient-text { background: linear-gradient(135deg, #818cf8, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        /* Unique Moving Background */
-        .blob { position: fixed; width: 500px; height: 500px; background: rgba(99, 102, 241, 0.15); filter: blur(100px); border-radius: 50%; z-index: -1; pointer-events: none; transition: transform 0.2s ease-out; }
-        
+        .blob { position: fixed; width: 600px; height: 600px; background: rgba(99, 102, 241, 0.12); filter: blur(120px); border-radius: 50%; z-index: -1; pointer-events: none; }
         .reveal { opacity: 0; transform: translateY(40px); transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
-        
-        /* Bento Card Hover */
-        .bento-card { transition: all 0.4s ease; }
-        .bento-card:hover { transform: translateY(-10px); border-color: rgba(129, 140, 248, 0.5); background: rgba(255, 255, 255, 0.06); }
+        .stat-card { border-left: 2px solid #6366f1; padding-left: 1.5rem; }
     </style>
 </head>
 <body>
 
-    <div class="blob"></div>
+    <div class="blob" id="cursor-blob"></div>
 
     <nav class="fixed w-full z-50 px-6 py-4">
         <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
             <span class="text-xl font-extrabold tracking-tighter gradient-text">MONICA MOORTHY</span>
-            <div class="hidden md:flex gap-8 text-sm font-medium items-center">
-                <a href="#about" class="hover:text-indigo-400 transition">About</a>
-                <a href="#services" class="hover:text-indigo-400 transition">Services</a>
-                <a href="tel:9894190664" class="px-5 py-2 bg-indigo-600 rounded-xl hover:scale-105 transition shadow-lg">Call: 9894190664</a>
+            <div class="hidden md:flex gap-8 text-sm font-medium items-center text-gray-400">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#experience" class="hover:text-white transition">Experience</a>
+                <a href="#services" class="hover:text-white transition">Services</a>
+                <a href="#contact" class="px-5 py-2 bg-indigo-600 text-white rounded-xl hover:scale-105 transition shadow-lg">Book Appointment</a>
             </div>
         </div>
     </nav>
 
-    <section id="about" class="pt-40 pb-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <section class="pt-40 pb-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div class="reveal">
-            <span class="px-4 py-1 rounded-full border border-indigo-500/30 text-indigo-400 text-xs font-bold uppercase tracking-widest mb-6 inline-block">Premium Coaching</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">Master Your Mind with <span class="gradient-text">NLP Expert</span> Monica.</h1>
-            <p class="text-gray-400 text-lg mb-8 leading-relaxed">
-                As a specialized NLP Trainer and Psychology Coach, Monica Moorthy provides the tools to reprogram limiting beliefs and achieve peak mental performance.
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="mailto:monicamoorthy@gmail.com" class="px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-indigo-100 transition">monicamoorthy@gmail.com</a>
+            <span class="px-4 py-1 rounded-full border border-indigo-500/30 text-indigo-400 text-xs font-bold uppercase tracking-widest mb-6 inline-block italic">Empowering Futures Through Guidance</span>
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 tracking-tight">Career <span class="gradient-text">Architect.</span></h1>
+            <p class="text-gray-400 text-lg mb-8 leading-relaxed">Seasoned Career Coach & Trainer with 11+ years of expertise. Blending Accenture's tech foundation with psychological NLP insight to guide your path.</p>
+            <div class="grid grid-cols-2 gap-8 mb-8">
+                <div class="stat-card"><h4 class="text-3xl font-bold">11+</h4><p class="text-xs text-gray-500 uppercase">Years Exp</p></div>
+                <div class="stat-card"><h4 class="text-3xl font-bold">99%</h4><p class="text-xs text-gray-500 uppercase">Satisfied</p></div>
             </div>
+            <a href="#contact" class="inline-block px-10 py-5 bg-white text-black font-black rounded-2xl hover:bg-indigo-400 transition transform hover:-translate-y-1">REQUEST A FREE QUOTE</a>
         </div>
-        <div class="reveal relative group">
-            <div class="aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
-                <img id="profile-img" src="profile.png" alt="Monica Moorthy" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000'">
-            </div>
-            <div class="absolute -bottom-8 -left-8 glass p-6 rounded-2xl border-indigo-500/50 border">
-                <p class="text-3xl font-black text-indigo-400">98941</p>
-                <p class="text-xs uppercase tracking-widest text-gray-400">90664 (Contact)</p>
+        <div class="reveal relative">
+            <div class="rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl rotate-2 hover:rotate-0 transition duration-500">
+                <img src="profile.png" alt="Monica Moorthy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000'">
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-24 px-6 max-w-6xl mx-auto">
-        <div class="text-center mb-16 reveal">
-            <h2 class="text-4xl font-bold mb-4">Core Expertise</h2>
-            <p class="text-gray-500">Specialized pathways for mental transformation</p>
+    <section id="about" class="py-24 px-6 bg-white/[0.02]">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+            <div class="md:col-span-2 reveal">
+                <h2 class="text-4xl font-bold mb-6">Foundation for Success</h2>
+                <p class="text-gray-400 mb-6 leading-relaxed">Holding a Master of Computer Applications (MCA) with elite certifications in Career Counseling, NLP, Hypnopeadia, and Expressive Arts. My approach is both analytical and deeply empathetic.</p>
+                <div class="flex flex-wrap gap-4">
+                    <span class="px-4 py-2 glass rounded-lg text-sm italic">Certified NLP Trainer</span>
+                    <span class="px-4 py-2 glass rounded-lg text-sm italic">Career Counseling Expert</span>
+                    <span class="px-4 py-2 glass rounded-lg text-sm italic">Soft Skills Mentor</span>
+                </div>
+            </div>
+            <div class="glass p-8 rounded-3xl reveal">
+                <h3 class="font-bold mb-4 text-indigo-400 italic underline">Quick Contact</h3>
+                <p class="text-2xl font-black mb-2 tracking-tighter text-white">98941 90664</p>
+                <p class="text-gray-500 text-sm italic">monicamoorthy@gmail.com</p>
+                <p class="mt-4 text-xs text-gray-500 uppercase tracking-widest">Coimbatore, Tamil Nadu</p>
+            </div>
         </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="md:col-span-2 glass bento-card p-10 rounded-[2.5rem] reveal">
-                <div class="w-14 h-14 bg-indigo-600/20 rounded-2xl flex items-center justify-center mb-8">
-                    <i data-lucide="brain-circuit" class="text-indigo-400"></i>
+    </section>
+
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-10 text-center italic">Classroom in Action</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <img src="class1.jpg" class="rounded-2xl h-48 w-full object-cover glass hover:scale-105 transition" onerror="this.src='https://images.unsplash.com/photo-1524178232363-1fb28f74b671?q=80&w=500'">
+            <img src="class2.jpg" class="rounded-2xl h-48 w-full object-cover glass hover:scale-105 transition" onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=500'">
+            <img src="class3.jpg" class="rounded-2xl h-48 w-full object-cover glass hover:scale-105 transition" onerror="this.src='https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=500'">
+            <img src="class4.jpg" class="rounded-2xl h-48 w-full object-cover glass hover:scale-105 transition" onerror="this.src='https://images.unsplash.com/photo-1523240715639-9a671054324f?q=80&w=500'">
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center italic">Voices of Success</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass p-10 rounded-[2.5rem] flex gap-6 items-start reveal">
+                <img src="student1.jpg" class="w-16 h-16 rounded-full border-2 border-indigo-500" onerror="this.src='https://i.pravatar.cc/150?u=1'">
+                <div>
+                    <p class="text-gray-300 italic mb-4">"Monica ma'am identified my tech strengths that I never noticed. Today I am at Accenture thanks to her!"</p>
+                    <h5 class="font-bold text-white">— Arjun K., Software Engineer</h5>
                 </div>
-                <h3 class="text-3xl font-bold mb-4">NLP Training</h3>
-                <p class="text-gray-400 text-lg leading-relaxed">Neuro-Linguistic Programming is the science of excellence. Monica helps you master communication and behavioral patterns to rewrite your life's narrative.</p>
             </div>
-
-            <div class="glass bento-card p-10 rounded-[2.5rem] reveal">
-                <i data-lucide="sparkles" class="text-purple-400 mb-6 w-10 h-10"></i>
-                <h3 class="text-2xl font-bold mb-4">Psychology</h3>
-                <p class="text-gray-400">Deep behavioral analysis to understand and improve mental well-being and emotional intelligence.</p>
-            </div>
-
-            <div class="glass bento-card p-10 rounded-[2.5rem] reveal">
-                <i data-lucide="activity" class="text-emerald-400 mb-6 w-10 h-10"></i>
-                <h3 class="text-2xl font-bold mb-4">Wellness</h3>
-                <p class="text-gray-400">Strategies for work-life balance and stress management through psychology-backed techniques.</p>
-            </div>
-
-            <div class="md:col-span-2 glass bento-card p-10 rounded-[2.5rem] reveal flex flex-col md:flex-row justify-between items-center bg-indigo-600/10 border-indigo-500/20">
-                <div class="text-center md:text-left mb-6 md:mb-0">
-                    <h3 class="text-3xl font-bold mb-2 text-white">Ready for Change?</h3>
-                    <p class="text-indigo-300">Book your discovery session today.</p>
-                </div>
-                <div class="flex flex-col items-center md:items-end">
-                    <a href="tel:9894190664" class="text-2xl font-black text-white hover:text-indigo-400 transition mb-2 tracking-tighter">98941 90664</a>
-                    <p class="text-xs text-gray-500 uppercase tracking-widest">Call Now</p>
+            <div class="glass p-10 rounded-[2.5rem] flex gap-6 items-start reveal">
+                <img src="student2.jpg" class="w-16 h-16 rounded-full border-2 border-purple-500" onerror="this.src='https://i.pravatar.cc/150?u=2'">
+                <div>
+                    <p class="text-gray-300 italic mb-4">"Her soft skills workshop changed my body language and confidence. Best training session ever."</p>
+                    <h5 class="font-bold text-white">— Priya S., MBA Student</h5>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-16 text-center border-t border-white/5 bg-black/20">
-        <p class="text-gray-400 mb-2 font-bold">Monica Moorthy Coaching</p>
-        <p class="text-gray-600 text-sm">monicamoorthy@gmail.com • All Rights Reserved 2026</p>
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto text-center">
+        <div class="glass p-12 rounded-[3rem] reveal border-indigo-500/30">
+            <h2 class="text-4xl font-black mb-4">Ready to Transform?</h2>
+            <p class="text-gray-400 mb-10">Identify your strengths and achieve your career goals.</p>
+            <form action="https://formspree.io/f/monicamoorthy@gmail.com" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                <input type="text" placeholder="Your Name" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-indigo-500 outline-none" required>
+                <input type="email" placeholder="Your Email" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-indigo-500 outline-none" required>
+                <input type="tel" placeholder="Your Phone Number" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-indigo-500 outline-none col-span-1 md:col-span-2" required>
+                <select class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-indigo-500 outline-none col-span-1 md:col-span-2">
+                    <option class="text-black">Career Counseling & Guidance</option>
+                    <option class="text-black">NLP Training</option>
+                    <option class="text-black">Soft Skills Workshop</option>
+                </select>
+                <button type="submit" class="col-span-1 md:col-span-2 py-5 bg-white text-black font-black rounded-2xl hover:bg-indigo-400 transition transform hover:scale-105">BOOK APPOINTMENT NOW</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-gray-600 border-t border-white/5">
+        <p class="font-bold text-gray-400">© 2026 Monica Moorthy Coaching Hub</p>
+        <p class="text-sm mt-2 tracking-widest uppercase">Guided Success • Holistic Growth • Excellence</p>
     </footer>
 
     <script>
         lucide.createIcons();
-
-        // 1. Mouse Follower Effect
-        const blob = document.querySelector('.blob');
+        const blob = document.getElementById('cursor-blob');
         document.addEventListener('mousemove', (e) => {
-            blob.style.left = (e.clientX - 250) + 'px';
-            blob.style.top = (e.clientY - 250) + 'px';
+            blob.style.left = (e.clientX - 300) + 'px';
+            blob.style.top = (e.clientY - 300) + 'px';
         });
-
-        // 2. Staggered Scroll Reveal
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('active');
-                    }, index * 100);
-                }
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        // 3. Image Parallax
-        window.addEventListener('scroll', () => {
-            const img = document.getElementById('profile-img');
-            const scroll = window.pageYOffset;
-            img.style.transform = `translateY(${scroll * 0.05}px)`;
-        });
     </script>
 </body>
 </html>
