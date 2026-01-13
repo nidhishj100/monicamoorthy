@@ -8,89 +8,131 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050505; color: white; overflow-x: hidden; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .gradient-text { background: linear-gradient(135deg, #c084fc, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-glow { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 600px; background: radial-gradient(circle at 50% 30%, rgba(99, 102, 241, 0.15), transparent 70%); z-index: -1; }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #030712; color: white; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(135deg, #818cf8, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Unique Moving Background */
+        .blob { position: fixed; width: 500px; height: 500px; background: rgba(99, 102, 241, 0.15); filter: blur(100px); border-radius: 50%; z-index: -1; pointer-events: none; transition: transform 0.2s ease-out; }
+        
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        /* Bento Card Hover */
+        .bento-card { transition: all 0.4s ease; }
+        .bento-card:hover { transform: translateY(-10px); border-color: rgba(129, 140, 248, 0.5); background: rgba(255, 255, 255, 0.06); }
     </style>
 </head>
 <body>
 
-    <div class="hero-glow"></div>
+    <div class="blob"></div>
 
     <nav class="fixed w-full z-50 px-6 py-4">
         <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
             <span class="text-xl font-extrabold tracking-tighter gradient-text">MONICA MOORTHY</span>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
-                <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#services" class="hover:text-white transition">Services</a>
-                <a href="#contact" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition">Book a Session</a>
+            <div class="hidden md:flex gap-8 text-sm font-medium items-center">
+                <a href="#about" class="hover:text-indigo-400 transition">About</a>
+                <a href="#services" class="hover:text-indigo-400 transition">Services</a>
+                <a href="tel:9894190664" class="px-5 py-2 bg-indigo-600 rounded-xl hover:scale-105 transition shadow-lg">Call: 9894190664</a>
             </div>
         </div>
     </nav>
 
-    <section class="pt-40 pb-20 px-6 text-center">
+    <section id="about" class="pt-40 pb-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div class="reveal">
-            <span class="px-4 py-1 rounded-full border border-indigo-500/30 text-indigo-400 text-xs font-bold uppercase tracking-widest mb-6 inline-block">NLP Trainer & Psychology Coach</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">Master Your Mind. <br><span class="gradient-text">Elevate Your Life.</span></h1>
-            <p class="text-gray-400 max-w-2xl mx-auto text-lg mb-10">Monica Moorthy helps individuals unlock their full potential through Neuro-Linguistic Programming and Psychology-backed coaching strategies.</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#contact" class="px-8 py-4 bg-white text-black font-bold rounded-xl hover:scale-105 transition duration-300">Start Transformation</a>
-                <a href="#services" class="px-8 py-4 glass rounded-xl font-bold hover:bg-white/10 transition">Explore Services</a>
+            <span class="px-4 py-1 rounded-full border border-indigo-500/30 text-indigo-400 text-xs font-bold uppercase tracking-widest mb-6 inline-block">Premium Coaching</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">Master Your Mind with <span class="gradient-text">NLP Expert</span> Monica.</h1>
+            <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                As a specialized NLP Trainer and Psychology Coach, Monica Moorthy provides the tools to reprogram limiting beliefs and achieve peak mental performance.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="mailto:monicamoorthy@gmail.com" class="px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-indigo-100 transition">monicamoorthy@gmail.com</a>
+            </div>
+        </div>
+        <div class="reveal relative group">
+            <div class="aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
+                <img id="profile-img" src="profile.png" alt="Monica Moorthy" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000'">
+            </div>
+            <div class="absolute -bottom-8 -left-8 glass p-6 rounded-2xl border-indigo-500/50 border">
+                <p class="text-3xl font-black text-indigo-400">98941</p>
+                <p class="text-xs uppercase tracking-widest text-gray-400">90664 (Contact)</p>
             </div>
         </div>
     </section>
 
     <section id="services" class="py-24 px-6 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-12 text-center">Specialized Coaching Areas</h2>
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-4xl font-bold mb-4">Core Expertise</h2>
+            <p class="text-gray-500">Specialized pathways for mental transformation</p>
+        </div>
+        
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="md:col-span-2 glass p-8 rounded-3xl reveal">
-                <i data-lucide="brain" class="text-indigo-500 mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">NLP Training</h3>
-                <p class="text-gray-400">Rewire your subconscious patterns. Learn tools to communicate effectively, overcome phobias, and build lasting confidence through certified NLP techniques.</p>
+            <div class="md:col-span-2 glass bento-card p-10 rounded-[2.5rem] reveal">
+                <div class="w-14 h-14 bg-indigo-600/20 rounded-2xl flex items-center justify-center mb-8">
+                    <i data-lucide="brain-circuit" class="text-indigo-400"></i>
+                </div>
+                <h3 class="text-3xl font-bold mb-4">NLP Training</h3>
+                <p class="text-gray-400 text-lg leading-relaxed">Neuro-Linguistic Programming is the science of excellence. Monica helps you master communication and behavioral patterns to rewrite your life's narrative.</p>
             </div>
-            <div class="glass p-8 rounded-3xl reveal" style="transition-delay: 0.1s;">
-                <i data-lucide="users" class="text-purple-500 mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">Psychology</h3>
-                <p class="text-gray-400">Deep dive into behavioral psychology to understand the 'why' behind your actions.</p>
+
+            <div class="glass bento-card p-10 rounded-[2.5rem] reveal">
+                <i data-lucide="sparkles" class="text-purple-400 mb-6 w-10 h-10"></i>
+                <h3 class="text-2xl font-bold mb-4">Psychology</h3>
+                <p class="text-gray-400">Deep behavioral analysis to understand and improve mental well-being and emotional intelligence.</p>
             </div>
-            <div class="glass p-8 rounded-3xl reveal">
-                <i data-lucide="target" class="text-blue-500 mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">Executive Coaching</h3>
-                <p class="text-gray-400">For leaders who want to master emotional intelligence and decision making.</p>
+
+            <div class="glass bento-card p-10 rounded-[2.5rem] reveal">
+                <i data-lucide="activity" class="text-emerald-400 mb-6 w-10 h-10"></i>
+                <h3 class="text-2xl font-bold mb-4">Wellness</h3>
+                <p class="text-gray-400">Strategies for work-life balance and stress management through psychology-backed techniques.</p>
             </div>
-            <div class="md:col-span-2 glass p-8 rounded-3xl reveal" style="transition-delay: 0.2s;">
-                <i data-lucide="heart" class="text-pink-500 mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">Personal Wellness</h3>
-                <p class="text-gray-400">Balance your mental health with practical, actionable coaching tailored to your lifestyle and personal goals.</p>
+
+            <div class="md:col-span-2 glass bento-card p-10 rounded-[2.5rem] reveal flex flex-col md:flex-row justify-between items-center bg-indigo-600/10 border-indigo-500/20">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <h3 class="text-3xl font-bold mb-2 text-white">Ready for Change?</h3>
+                    <p class="text-indigo-300">Book your discovery session today.</p>
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <a href="tel:9894190664" class="text-2xl font-black text-white hover:text-indigo-400 transition mb-2 tracking-tighter">98941 90664</a>
+                    <p class="text-xs text-gray-500 uppercase tracking-widest">Call Now</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-20 text-center border-t border-white/10">
-        <h2 class="text-4xl font-bold mb-6">Ready to begin?</h2>
-        <p class="text-gray-400 mb-8">Join Monica Moorthy and hundreds of others in the journey of self-mastery.</p>
-        <button class="px-10 py-4 bg-indigo-600 rounded-full font-bold hover:shadow-[0_0_30px_rgba(99,102,241,0.4)] transition">Contact Monica Now</button>
-        <div class="mt-20 text-gray-600 text-sm">
-            &copy; 2026 Monica Moorthy Coaching. Built for Excellence.
-        </div>
+    <footer class="py-16 text-center border-t border-white/5 bg-black/20">
+        <p class="text-gray-400 mb-2 font-bold">Monica Moorthy Coaching</p>
+        <p class="text-gray-600 text-sm">monicamoorthy@gmail.com • All Rights Reserved 2026</p>
     </footer>
 
     <script>
-        // Initialize Icons
         lucide.createIcons();
 
-        // Reveal Animation on Scroll
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, observerOptions); 
+        // 1. Mouse Follower Effect
+        const blob = document.querySelector('.blob');
+        document.addEventListener('mousemove', (e) => {
+            blob.style.left = (e.clientX - 250) + 'px';
+            blob.style.top = (e.clientY - 250) + 'px';
+        });
 
+        // 2. Staggered Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, index * 100);
+                }
+            });
+        }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // 3. Image Parallax
+        window.addEventListener('scroll', () => {
+            const img = document.getElementById('profile-img');
+            const scroll = window.pageYOffset;
+            img.style.transform = `translateY(${scroll * 0.05}px)`;
+        });
     </script>
 </body>
 </html>
