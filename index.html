@@ -3,147 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monica Moorthy | Career Architect & NLP Master</title>
+    <title>Monica Moorthy | Career Architect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #030712; color: white; overflow-x: hidden; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .gradient-text { background: linear-gradient(135deg, #818cf8, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .blob { position: fixed; width: 600px; height: 600px; background: rgba(99, 102, 241, 0.12); filter: blur(120px); border-radius: 50%; z-index: -1; pointer-events: none; }
-        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
-        section { padding-top: 80px; padding-bottom: 80px; }
-        .timeline-dot { position: relative; }
-        .timeline-dot::before { content: ''; position: absolute; left: -33px; top: 5px; width: 14px; height: 14px; background: #6366f1; border-radius: 50%; box-shadow: 0 0 15px #6366f1; }
     </style>
 </head>
 <body>
-
-    <div class="blob" id="cursor-blob"></div>
-
-    <nav class="fixed w-full z-50 px-6 py-4">
-        <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
-            <span class="text-xl font-extrabold tracking-tighter gradient-text">MONICA MOORTHY</span>
-            <div class="hidden md:flex gap-8 text-sm font-medium items-center text-gray-400 uppercase tracking-widest">
-                <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#experience" class="hover:text-white transition">Experience</a>
-                <a href="#services" class="hover:text-white transition">Services</a>
-                <a href="#contact" class="px-5 py-2 bg-indigo-600 text-white rounded-xl hover:scale-105 transition shadow-lg">Book Now</a>
-            </div>
+    <nav class="fixed w-full z-50 p-6">
+        <div class="max-w-6xl mx-auto glass rounded-2xl p-4 flex justify-between items-center">
+            <span class="font-bold text-xl tracking-tighter">MONICA MOORTHY</span>
+            <a href="#contact" class="bg-indigo-600 px-4 py-2 rounded-xl text-sm font-bold">Book Now</a>
         </div>
     </nav>
 
-    <section id="home" class="min-h-screen flex items-center pt-32 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
-        <div class="reveal">
-            <span class="px-4 py-1 rounded-full border border-indigo-500/30 text-indigo-400 text-xs font-bold uppercase tracking-widest mb-6 inline-block italic">Empowering Futures Through Guidance</span>
-            <h1 class="text-6xl md:text-7xl font-extrabold mb-6 tracking-tight">Career <span class="gradient-text italic">Architect.</span></h1>
-            <p class="text-gray-400 text-lg mb-8 leading-relaxed">Seasoned Career Coach & Trainer based in Coimbatore. Blending 11+ years of expertise from Accenture and Career Counseling.</p>
-            <div class="flex gap-4">
-                <a href="#contact" class="px-8 py-4 bg-white text-black font-black rounded-xl hover:bg-indigo-400 transition">REQUEST CALL</a>
-                <a href="#about" class="px-8 py-4 glass rounded-xl font-bold hover:bg-white/10 transition">DETAILS</a>
-            </div>
+    <section class="pt-40 pb-20 px-6 max-w-6xl mx-auto text-center">
+        <h1 class="text-6xl font-extrabold mb-6">Empowering <span class="text-indigo-500 italic">Futures.</span></h1>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-10 text-left">Monica Moorthy is a seasoned Career Coach and Trainer in Coimbatore with 11+ years of experience (7 years at Accenture). She specializes in NLP, Career Counseling, and Soft Skills workshops.</p>
+        
+        <div class="glass p-10 rounded-[3rem] text-left max-w-4xl mx-auto mb-20">
+            <h3 class="text-2xl font-bold text-indigo-400 mb-4">A Note of Gratitude</h3>
+            <p class="italic text-gray-300">"Dear Ma'am, thank you for your exceptional teaching and guidance during our placement training. Your gesture of giving chocolates meant so much to us at Dhanalakshmi Srinivasan College. We truly feel cared for." — Nidhish J.</p>
         </div>
-        <div class="reveal relative">
-            <div class="rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl rotate-3 hover:rotate-0 transition duration-700 aspect-[4/5] bg-gray-900">
-                <img id="hero-img" src="profile.png" alt="Monica Moorthy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000'">
-            </div>
-        </div>
-    </section>
 
-    <section id="about" class="px-6 max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="reveal">
-                <h2 class="text-4xl font-bold mb-6 italic underline decoration-indigo-500">About Monica Moorthy</h2>
-                <p class="text-gray-400 leading-relaxed mb-6">Monica Moorthy is a seasoned Career Coach and Trainer based in Coimbatore, Tamil Nadu, with a total of 11 years of professional experience. She specializes in guiding students and professionals toward their ideal career paths using NLP and psychological insight.</p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="glass p-4 rounded-xl"><h4 class="text-2xl font-bold text-indigo-400">11+</h4><p class="text-[10px] uppercase">Years Exp</p></div>
-                    <div class="glass p-4 rounded-xl"><h4 class="text-2xl font-bold text-indigo-400">MCA</h4><p class="text-[10px] uppercase">Masters Degree</p></div>
-                </div>
-            </div>
-            <div class="reveal glass p-10 rounded-[3rem] border-indigo-500/20">
-                <h3 class="text-xl font-bold mb-4 text-indigo-300">Certifications</h3>
-                <ul class="text-sm text-gray-400 space-y-2">
-                    <li>• Career Counseling & Guidance</li>
-                    <li>• Neuro-Linguistic Programming (NLP)</li>
-                    <li>• Hypnopeadia & Expressive Arts</li>
-                    <li>• Soft Skills Trainer</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="px-6 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-16 text-center italic">Professional Journey</h2>
-        <div class="max-w-3xl mx-auto border-l border-white/10 pl-10 space-y-12">
-            <div class="relative reveal timeline-dot">
-                <h4 class="text-xl font-bold">Accenture (7 Years)</h4>
-                <p class="text-indigo-400 text-sm italic mb-2">Software Testing & Training Specialist</p>
-                <p class="text-gray-400 text-sm">Empowered students across India with essential communication skills and technical training.</p>
-            </div>
-            <div class="relative reveal timeline-dot">
-                <h4 class="text-xl font-bold">Career Architect (4+ Years)</h4>
-                <p class="text-indigo-400 text-sm italic mb-2">Counseling & Mentor</p>
-                <p class="text-gray-400 text-sm">Specializing in personalized coaching, goal setting, and holistic development.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-6 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-10 text-center italic">Classroom in Action</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <img src="class1.jpg" class="rounded-2xl h-48 w-full object-cover glass hover:scale-105 transition duration-500 shadow-xl" onerror="this.src='https://images.unsplash.com/photo-1524178232363-1fb28f74b671?q=80&w=500'">
-            <img src="class2.jpg" class="rounded-2xl h-48 w-full object-cover glass hover:scale-105 transition duration-500 shadow-xl" onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=500'">
-            <img src="class3.jpg" class="rounded-2xl h-48 w-full object-cover glass hover:scale-105 transition duration-500 shadow-xl" onerror="this.src='https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=500'">
-            <img src="class4.jpg" class="rounded-2xl h-48 w-full object-cover glass hover:scale-105 transition duration-500 shadow-xl" onerror="this.src='https://images.unsplash.com/photo-1523240715639-9a671054324f?q=80&w=500'">
+            <img src="class1.jpg" class="rounded-2xl h-48 w-full object-cover" onerror="this.this.style.display='none'">
+            <img src="class2.jpg" class="rounded-2xl h-48 w-full object-cover" onerror="this.this.style.display='none'">
+            <img src="class3.jpg" class="rounded-2xl h-48 w-full object-cover" onerror="this.this.style.display='none'">
+            <img src="class4.jpg" class="rounded-2xl h-48 w-full object-cover" onerror="this.this.style.display='none'">
         </div>
     </section>
 
-    <section class="py-24 px-6 max-w-6xl mx-auto">
-        <div class="glass p-8 md:p-16 rounded-[4rem] reveal border-indigo-500/20 relative overflow-hidden bg-indigo-900/5">
-            <div class="absolute top-10 right-10 text-indigo-500/10 text-[150px] font-serif italic">"</div>
-            <div class="grid md:grid-cols-3 gap-12 items-center relative z-10">
-                <div class="text-center">
-                    <img src="student_nidhish.jpg" alt="Nidhish J." class="w-48 h-48 mx-auto rounded-full border-4 border-indigo-500/30 p-2 mb-4" onerror="this.src='https://i.pravatar.cc/300?u=nidhish'">
-                    <h4 class="text-xl font-bold italic">Nidhish J.</h4>
-                    <p class="text-indigo-400 text-xs italic">Dhanalakshmi Srinivasan College</p>
-                </div>
-                <div class="md:col-span-2 space-y-4">
-                    <h3 class="text-2xl font-semibold text-indigo-300 italic underline decoration-indigo-500/30">Exceptional Teaching Gratitude</h3>
-                    <div class="text-gray-400 leading-relaxed italic space-y-4 text-sm">
-                        <p>Dear Ma'am, I am writing to express my sincere gratitude for your exceptional teaching and guidance during our placement training. Your classes were engaging and truly helped us prepare for the challenges ahead.</p>
-                        <p>Additionally, thank you for the thoughtful gift of chocolates. It may seem like a small act, but it truly meant a lot to all of us and made us feel cared for. On behalf of the students, thank you for your support and kindness.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto">
-        <div class="glass p-12 rounded-[3rem] reveal border-indigo-500/30 text-center">
-            <h2 class="text-4xl font-black mb-8 italic italic tracking-tighter">Book Appointment</h2>
-            <form class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-                <input type="text" placeholder="Name" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl outline-none focus:border-indigo-500">
-                <input type="email" placeholder="Email" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl outline-none focus:border-indigo-500">
-                <input type="tel" placeholder="98941 90664" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl outline-none focus:border-indigo-500 col-span-2">
-                <button class="col-span-2 py-5 bg-white text-black font-black rounded-2xl hover:bg-indigo-400 transition">GET A CALL BACK</button>
-            </form>
-            <p class="mt-8 text-gray-600 text-xs italic">98941 90664 • monicamoorthy@gmail.com</p>
-        </div>
-    </section>
+    <footer id="contact" class="py-20 text-center border-t border-white/10">
+        <p class="font-bold">Contact: 98941 90664</p>
+        <p class="text-gray-500">monicamoorthy@gmail.com</p>
+    </footer>
 
     <script>
         lucide.createIcons();
-        const blob = document.getElementById('cursor-blob');
-        document.addEventListener('mousemove', (e) => {
-            blob.style.left = (e.clientX - 300) + 'px';
-            blob.style.top = (e.clientY - 300) + 'px';
-        });
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
-</body> 
+</body>
 </html>
